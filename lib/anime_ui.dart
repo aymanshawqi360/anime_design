@@ -13,8 +13,8 @@ class AnimeUi extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       //  theme: ThemeData(scaffoldBackgroundColor: HexColor(hexColor: 'DEE3FF')),
 
-      initialRoute: Routes.homeScreen,
-      // initialRoute: Routes.detailsScreen,
+      // initialRoute: Routes.homeScreen,
+      initialRoute: Routes.detailsScreen,
       // initialRoute: Routes.upgradePlanScreen,
       onGenerateRoute: appRouting.onGenerateRoute,
     );

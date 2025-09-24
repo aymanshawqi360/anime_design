@@ -14,29 +14,33 @@ class AnimeItem extends StatelessWidget {
       width: 120,
       height: 42,
       decoration: BoxDecoration(
-        color: Colors.grey.withOpacity(0.5),
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.2),
-            spreadRadius: 3,
-            blurRadius: 10,
             offset: Offset(0, 4),
+            blurRadius: 10,
+            spreadRadius: 1,
           ),
         ],
       ),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(20),
-        child: BackdropFilter(
-          filter: ImageFilter.blur(sigmaX: 50, sigmaY: 50),
-          child: Container(
-            alignment: Alignment.center,
-            color: Colors.grey.withOpacity(0.1),
-            child: Text(
-              animeCategorySet.category,
-              style: TextStyles.font13Medium,
+        child: Stack(
+          children: [
+            BackdropFilter(
+              filter: ImageFilter.blur(sigmaX: 12, sigmaY: 12),
+              child: Container(color: Colors.white.withOpacity(0.1)),
             ),
-          ),
+
+            Center(
+              child: Text(
+                animeCategorySet.category,
+
+                style: TextStyles.font13Medium,
+              ),
+            ),
+          ],
         ),
       ),
     );

@@ -1,5 +1,6 @@
 import 'package:anime_ui/config/constants/anime_quick_info.dart';
 import 'package:anime_ui/core/utils/assets_manager.dart';
+import 'package:anime_ui/core/utils/extension.dart';
 import 'package:anime_ui/core/utils/hex_color.dart';
 import 'package:anime_ui/core/utils/spacing.dart';
 import 'package:anime_ui/core/utils/styles.dart';
@@ -87,7 +88,7 @@ class DetailsScreen extends StatelessWidget {
                       ],
                     ),
                     Positioned(
-                      bottom: 319,
+                      top: context.screenHeight / 1.85,
                       left: 120,
 
                       child: Row(
